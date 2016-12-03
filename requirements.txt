@@ -1,0 +1,4 @@
+Django==1.10.4
+djangorestframework==3.5.3
+pyaml==16.11.4
+PyYAML==3.12

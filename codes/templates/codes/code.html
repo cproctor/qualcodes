@@ -1,0 +1,66 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.4.0/d3.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+        <style>
+            .selected {
+                background-color: lightblue;
+            }
+            body {
+                font-family: Helvetica;
+            }
+            nav {
+                background-color: lightblue;
+                padding: 8px;
+            }
+            nav ul {
+                list-style: none;
+            }
+            nav ul li {
+                width: 80px;
+                float: left;
+            }
+            .clear {
+                clear: both;
+            }
+            #container {
+                width: 700px;
+                margin: 0 auto;
+            }
+            #codes, #new-code {
+                margin-top: 20px;
+            }
+            #codes button, #new-code button, #new-code input{
+                font-size: 1.5em;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div id="container">
+        <nav>
+            <h1>{{artifact.user_id}} {{artifact.column_id}}</h1>
+            <ul>
+                <li><a href="{% url 'artifact-code' prev_id %}">Previous</a></li>
+                <li><a href="{% url 'artifact-code' next_id %}">Next</a></li>
+            </ul>
+            <div class="clear"></div>
+        </nav>
+        <p>{{artifact.text|safe}}</p>
+        <div id="codes"></div>
+        <div id="new-code">
+            <input id="new-code-name">
+            <button id="new-code-submit">Add Code</button>
+        </div>
+        </div>
+        <script>
+            ARTIFACT_CODES = {{artifact_codes|safe}}
+            POST_URL = "{% url 'artifact-detail' artifact.id %}"
+            NEW_CODE_URL = "{% url 'code-list' %}"
+            CODES = {{codes|safe}}
+        </script>
+        <script src="{% static 'codes/code_buttons.js' %}"></script>
+    </body>
+</html>
