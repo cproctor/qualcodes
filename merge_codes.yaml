@@ -1,0 +1,31 @@
+# A mapping from codes to simplified codes to merge. 
+
+CodingAsThinking: 
+    - Agentic
+    - Voice
+ComputerizedSearch:
+    - UsesCode
+    - UsesPython
+ManualSearch:
+    - GuessAndCheck
+    - ReduceSearch
+    - UsesCalculator
+    - UsesOffice
+    - UsesPaperAndPencil
+Planning:
+    - DerivesAlgorithm
+    - PlansByThinking
+    - PlansWithDiagrams
+SelfRegulates:
+    - ExecutiveFunction
+    - OvercomesFrustration
+SystematicDebugging:
+    - IOdebugging
+    - ReductiveDebugging
+    - RereadDebugging
+UsesResources:
+    - ReferencesOtherProjects
+    - SeeksResources
+Syntax:
+    - noBugs
+    - Typos
