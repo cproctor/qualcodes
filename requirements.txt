@@ -1,4 +1,6 @@
-Django==1.10.4
-djangorestframework==3.5.3
-pyaml==16.11.4
-PyYAML==3.12
+Django==2.2.5
+djangorestframework==3.10.3
+pyaml==19.4.1
+pytz==2019.2
+PyYAML==5.1.2
+sqlparse==0.3.0
