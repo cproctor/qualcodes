@@ -1,4 +1,4 @@
-Django==2.2.5
+Django==2.2.27
 djangorestframework==3.10.3
 pyaml==19.4.1
 pytz==2019.2
